@@ -1,5 +1,5 @@
 mod types;
-mod server;
+mod client
 
 fn main() {
     
@@ -8,8 +8,9 @@ fn main() {
         if (a == "server") {
             server();
         }
-        if (a == "client") {
-            client();
+
+        if a == "client" {
+            client::client()
         }
     }
 	let m = types::Message{message : String::from("Sample?")};
@@ -20,7 +21,4 @@ fn main() {
 
 fn server() {
 	server::serve("0.0.0.0:8080");
-}
-
-fn client() {
 }
