@@ -1,4 +1,5 @@
 mod types;
+mod client;
 
 fn main() {
     for a in std::env::args() {
@@ -6,7 +7,7 @@ fn main() {
             server();
         }
         if a == "client" {
-            client();
+            client::client();
         }
     }
 	let m = types::Message{message : String::from("Sample?")};
@@ -16,7 +17,4 @@ fn main() {
 }
 
 fn server() {
-}
-fn client() {
-    println!("Client running:");
 }
