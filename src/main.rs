@@ -1,18 +1,23 @@
-
-use serde::{Serialize, Deserialize};
-
-#[derive(Serialize, Deserialize)]
-struct Message {
-	message : std::string::String,
-}
-
-struct Index {
-	index: u64,
-}
+mod types;
 
 fn main() {
-	let m = Message{message : String::from("Sample?")};
+    
+    let args = std::env::args();
+    for a in std::env::args() {
+        if (a == "server") {
+            server();
+        }
+        if (a == "client") {
+            client();
+        }
+    }
+	let m = types::Message{message : String::from("Sample?")};
 	let s = serde_json::to_string(&m).unwrap();
-	
+
 	println!("serialized = {}", s);
+}
+
+fn server() {
+}
+fn client() {
 }
