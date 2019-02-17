@@ -1,11 +1,14 @@
 mod types;
+mod server;
 
 fn main() {
+    
+    let args = std::env::args();
     for a in std::env::args() {
-        if a == "server" {
+        if (a == "server") {
             server();
         }
-        if a == "client" {
+        if (a == "client") {
             client();
         }
     }
@@ -16,7 +19,8 @@ fn main() {
 }
 
 fn server() {
+	server::serve("0.0.0.0:8080");
 }
+
 fn client() {
-    println!("Client running:");
 }
