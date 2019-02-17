@@ -5,3 +5,5 @@ pub fn serve(address : &str) {
 			rouille:Response::text("harrison, brewton");
 		});
 }
+// let m = types::Message{message : String::from("Sample?")};
+// let s = serde_json::to_string(&m).unwrap();

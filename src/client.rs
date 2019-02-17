@@ -11,3 +11,6 @@ pub fn client() {
     }
 
 }
+
+// let m = types::Message{message : String::from("Sample?")};
+// let s = serde_json::to_string(&m).unwrap();
